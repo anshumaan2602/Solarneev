@@ -15,8 +15,8 @@ export const shared = {
   team: [
     { name: 'Vinayak Kad', photo: 'vinayak-kad' },
     { name: 'Bhawna Singh', photo: 'operations-manager' },
-    { name: 'Varun Rana', photo: 'site-engineer' },
-    { name: 'Nitin Tyagi', photo: 'customer-success' },
+    { name: 'Nitin Tyagi', photo: 'site-engineer' },
+    { name: 'Varun Rana', photo: 'customer-success' },
   ],
   reviews: [
     { name: '[Customer name]', before: '[₹X,XXX]', after: '[₹XXX]' },
