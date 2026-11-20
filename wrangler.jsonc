@@ -1,10 +1,13 @@
-// Cloudflare Workers config: serve the static site that `npm run build` writes to out/.
-// In the Cloudflare dashboard, the build command must be `npm run build` and the deploy
-// command `npx wrangler deploy`.
+// Cloudflare Workers config: build the static site, then serve what it writes to out/.
+// The build runs here, so the Cloudflare dashboard needs no build command; its deploy
+// command stays `npx wrangler deploy`.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "solarneev",
   "compatibility_date": "2026-11-18",
+  "build": {
+    "command": "npm run build"
+  },
   "assets": {
     "directory": "./out",
     // Unknown addresses get the site's 404 page; /hi/ serves hi/index.html.
