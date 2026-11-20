@@ -37,8 +37,8 @@ export const site: SiteConfig = {
   ],
   email: "solarneev.25@gmail.com",
   website: { display: "www.solarneev.com", href: "https://www.solarneev.com" },
-  address: "K-54, First Floor, Dev Complex, near Palhera Park, Pallav Puram Phase-2, Meerut, Uttar Pradesh 250110",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Dev+Complex+Pallav+Puram+Phase+2+Meerut+250110",
+  address: "J-12, Pallavpuram Phase 1, Meerut, Uttar Pradesh 250110",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=J-12+Pallavpuram+Phase+1+Meerut+250110",
   subsidyPortal: { display: "pmsuryaghar.gov.in", href: "https://pmsuryaghar.gov.in" },
   copyrightYear: 2026,
   stats: {
