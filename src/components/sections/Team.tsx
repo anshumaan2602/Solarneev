@@ -1,4 +1,5 @@
 import { useId } from "react";
+import founderPhoto from "@/assets/founder.jpg";
 import { shared } from "@/content";
 import { useLang } from "../providers/LangProvider";
 import { PersonIcon } from "../ui/icons";
@@ -19,8 +20,9 @@ export function Team() {
 
         <article className={s.founder}>
           <div className={s.founderPhoto}>
-            <PersonIcon size={60} strokeWidth={1.4} />
-            <span className={s.founderPhotoLabel}>{c.team.photo}</span>
+            {/* A plain <img>: the site is a static export, so next/image's optimiser is not available. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={founderPhoto.src} alt={`${c.team.founderRole}, SOLARNEEV`} width={founderPhoto.width} height={founderPhoto.height} loading="lazy" className={s.founderImg} />
           </div>
           <div className={s.founderText}>
             <p className={s.role}>{c.team.founderRole}</p>
