@@ -417,8 +417,7 @@ export const en = {
     p: 'Meet the team that surveys your roof, installs your system and files your subsidy.',
     photo: 'Add photo',
     founderRole: 'Founder',
-    quote: '[A line in your own words: why you started, and what customers can expect from you.]',
-    cred: '[Years of experience, certifications or licences]',
+    cred: 'B.Tech, Electrical Engineering',
     members: [
       { role: 'Installation lead', line: 'Runs the crew on installation day.' },
       { role: 'Electrical engineer', line: 'Designs the system and checks every connection.' },

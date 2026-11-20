@@ -89,13 +89,6 @@
   letter-spacing: -0.02em;
 }
 
-.quote {
-  margin: 10px 0 0;
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--color-on-dark-strong);
-}
-
 .cred {
   margin: 6px 0 0;
   font-size: 14px;

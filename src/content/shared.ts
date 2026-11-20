@@ -10,7 +10,7 @@ export const shared = {
   // Each language's own name, for the language switch.
   languageNames: { en: 'English', hi: 'हिंदी' },
   // Placeholders: replace with real people and real bills before launch.
-  founder: { name: '[Founder name]' },
+  founder: { name: 'Anshumaan Gautam' },
   team: [{ name: '[Name]' }, { name: '[Name]' }, { name: '[Name]' }],
   reviews: [
     { name: '[Customer name]', before: '[₹X,XXX]', after: '[₹XXX]' },

@@ -22,12 +22,11 @@ export function Team() {
           <div className={s.founderPhoto}>
             {/* A plain <img>: the site is a static export, so next/image's optimiser is not available. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={founderPhoto.src} alt={`${c.team.founderRole}, SOLARNEEV`} width={founderPhoto.width} height={founderPhoto.height} loading="lazy" className={s.founderImg} />
+            <img src={founderPhoto.src} alt={shared.founder.name} width={founderPhoto.width} height={founderPhoto.height} loading="lazy" className={s.founderImg} />
           </div>
           <div className={s.founderText}>
             <p className={s.role}>{c.team.founderRole}</p>
             <p className={s.founderName}>{shared.founder.name}</p>
-            <blockquote className={s.quote}>{c.team.quote}</blockquote>
             <p className={s.cred}>{c.team.cred}</p>
           </div>
         </article>
