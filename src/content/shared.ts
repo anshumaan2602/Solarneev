@@ -11,7 +11,13 @@ export const shared = {
   languageNames: { en: 'English', hi: 'हिंदी' },
   // Placeholders: replace with real people and real bills before launch.
   founder: { name: 'Anshumaan Gautam' },
-  team: [{ name: 'Vinayak Kad' }, { name: '[Name]' }, { name: '[Name]' }, { name: '[Name]' }],
+  // Same order as team.members in en.ts and hi.ts. `photo` names an image in src/components/sections/Team.tsx.
+  team: [
+    { name: 'Vinayak Kad', photo: 'vinayak-kad' },
+    { name: '[Name]', photo: 'operations-manager' },
+    { name: '[Name]', photo: 'site-engineer' },
+    { name: '[Name]', photo: 'customer-success' },
+  ],
   reviews: [
     { name: '[Customer name]', before: '[₹X,XXX]', after: '[₹XXX]' },
     { name: '[Customer name]', before: '[₹XX,XXX]', after: '[₹X,XXX]' },

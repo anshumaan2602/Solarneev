@@ -420,12 +420,9 @@ export const en = {
     cred: 'B.Tech, Electrical Engineering',
     members: [
       { role: 'Business Consultant', line: 'Bachelor of Law, Master in Computers' },
-      { role: 'Installation lead', line: 'Runs the crew on installation day.' },
-      { role: 'Electrical engineer', line: 'Designs the system and checks every connection.' },
-      {
-        role: 'Subsidy and customer care',
-        line: 'Files your portal application and tracks the subsidy.',
-      },
+      { role: 'Operations Manager', line: 'Plans every installation and keeps it on schedule.' },
+      { role: 'Site Engineer', line: 'Surveys your roof, designs the system and checks every connection.' },
+      { role: 'Customer Success Lead', line: 'Files your subsidy application and stays with you after installation.' },
     ],
   },
   reviews: {

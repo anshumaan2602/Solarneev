@@ -1,5 +1,8 @@
 import { useId } from "react";
 import founderPhoto from "@/assets/founder.jpg";
+import customerSuccessPhoto from "@/assets/team-customer-success.jpg";
+import operationsManagerPhoto from "@/assets/team-operations-manager.jpg";
+import siteEngineerPhoto from "@/assets/team-site-engineer.jpg";
 import vinayakKadPhoto from "@/assets/team-vinayak-kad.jpg";
 import { shared } from "@/content";
 import { useLang } from "../providers/LangProvider";
@@ -7,9 +10,12 @@ import { PersonIcon } from "../ui/icons";
 import ui from "../ui/section.module.css";
 import s from "./Team.module.css";
 
-/** Team photos by name (shared.team). Members without one show a placeholder. */
+/** Team photos, by the `photo` key in shared.team. Members without one show a placeholder. */
 const MEMBER_PHOTOS: Record<string, { src: string; width: number; height: number }> = {
-  "Vinayak Kad": vinayakKadPhoto,
+  "vinayak-kad": vinayakKadPhoto,
+  "operations-manager": operationsManagerPhoto,
+  "site-engineer": siteEngineerPhoto,
+  "customer-success": customerSuccessPhoto,
 };
 
 /** The founder and the people customers deal with. Some names and photos are still placeholders. */
@@ -39,14 +45,14 @@ export function Team() {
 
         <div className={s.members}>
           {c.team.members.map((m, i) => {
-            const name = shared.team[i].name;
-            const photo = MEMBER_PHOTOS[name];
+            const { name, photo: photoKey } = shared.team[i];
+            const photo = MEMBER_PHOTOS[photoKey];
             return (
               <article key={i} className={s.member}>
                 <div className={s.memberPhoto}>
                   {photo ? (
                     // eslint-disable-next-line @next/next/no-img-element -- static export: no image optimiser
-                    <img src={photo.src} alt={name} width={photo.width} height={photo.height} loading="lazy" className={s.memberImg} />
+                    <img src={photo.src} alt={name.startsWith("[") ? m.role : name} width={photo.width} height={photo.height} loading="lazy" className={s.memberImg} />
                   ) : (
                     <>
                       <PersonIcon size={46} strokeWidth={1.5} />
