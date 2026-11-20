@@ -419,6 +419,7 @@ export const en = {
     founderRole: 'Founder',
     cred: 'B.Tech, Electrical Engineering',
     members: [
+      { role: 'Business Consultant', line: 'Bachelor of Law, Master in Computers' },
       { role: 'Installation lead', line: 'Runs the crew on installation day.' },
       { role: 'Electrical engineer', line: 'Designs the system and checks every connection.' },
       {

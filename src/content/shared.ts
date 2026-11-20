@@ -11,7 +11,7 @@ export const shared = {
   languageNames: { en: 'English', hi: 'हिंदी' },
   // Placeholders: replace with real people and real bills before launch.
   founder: { name: 'Anshumaan Gautam' },
-  team: [{ name: '[Name]' }, { name: '[Name]' }, { name: '[Name]' }],
+  team: [{ name: 'Vinayak Kad' }, { name: '[Name]' }, { name: '[Name]' }, { name: '[Name]' }],
   reviews: [
     { name: '[Customer name]', before: '[₹X,XXX]', after: '[₹XXX]' },
     { name: '[Customer name]', before: '[₹XX,XXX]', after: '[₹X,XXX]' },
