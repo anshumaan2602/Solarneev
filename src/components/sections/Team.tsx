@@ -17,31 +17,31 @@ export function Team() {
   const { c } = useLang();
   const id = useId();
   return (
-      <section id="team" aria-labelledby={id} className={s.section}>
-        <div className={ui.container}>
-          <div className={s.top}>
-            <h2 id={id} className={`${ui.h2} ${s.title}`}>{c.team.h2}</h2>
-            <p className={s.lead}>{c.team.p}</p>
+    <section id="team" aria-labelledby={id} className={s.section}>
+      <div className={ui.container}>
+        <div className={s.top}>
+          <h2 id={id} className={`${ui.h2} ${s.title}`}>{c.team.h2}</h2>
+          <p className={s.lead}>{c.team.p}</p>
+        </div>
+
+        <article className={s.founder}>
+          <div className={s.founderPhoto}>
+            {/* A plain <img>: the site is a static export, so next/image's optimiser is not available. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={founderPhoto.src} alt={shared.founder.name} width={founderPhoto.width} height={founderPhoto.height} loading="lazy" className={s.founderImg} />
           </div>
+          <div className={s.founderText}>
+            <p className={s.role}>{c.team.founderRole}</p>
+            <p className={s.founderName}>{shared.founder.name}</p>
+            <p className={s.cred}>{c.team.cred}</p>
+          </div>
+        </article>
 
-          <article className={s.founder}>
-            <div className={s.founderPhoto}>
-              {/* A plain <img>: the site is a static export, so next/image's optimiser is not available. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={founderPhoto.src} alt={shared.founder.name} width={founderPhoto.width} height={founderPhoto.height} loading="lazy" className={s.founderImg} />
-            </div>
-            <div className={s.founderText}>
-              <p className={s.role}>{c.team.founderRole}</p>
-              <p className={s.founderName}>{shared.founder.name}</p>
-              <p className={s.cred}>{c.team.cred}</p>
-            </div>
-          </article>
-
-          <div className={s.members}>
-            {c.team.members.map((m, i) => {
-              const name = shared.team[i].name;
-              const photo = MEMBER_PHOTOS[name];
-              return (
+        <div className={s.members}>
+          {c.team.members.map((m, i) => {
+            const name = shared.team[i].name;
+            const photo = MEMBER_PHOTOS[name];
+            return (
               <article key={i} className={s.member}>
                 <div className={s.memberPhoto}>
                   {photo ? (
