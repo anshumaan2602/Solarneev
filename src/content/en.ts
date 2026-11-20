@@ -419,7 +419,7 @@ export const en = {
     founderRole: 'Founder',
     cred: 'B.Tech, Electrical Engineering',
     members: [
-      { role: 'Business Consultant', line: 'Bachelor of Law, Master in Computers' },
+      { role: 'Sr. Business Consultant', line: 'Bachelor of Law, Master in Computers' },
       { role: 'Operations Manager', line: 'Plans every installation and keeps it on schedule.' },
       { role: 'Site Engineer', line: 'Surveys your roof, designs the system and checks every connection.' },
       { role: 'Customer Success Lead', line: 'Files your subsidy application and stays with you after installation.' },

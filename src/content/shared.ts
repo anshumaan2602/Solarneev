@@ -14,9 +14,9 @@ export const shared = {
   // Same order as team.members in en.ts and hi.ts. `photo` names an image in src/components/sections/Team.tsx.
   team: [
     { name: 'Vinayak Kad', photo: 'vinayak-kad' },
-    { name: '[Name]', photo: 'operations-manager' },
-    { name: '[Name]', photo: 'site-engineer' },
-    { name: '[Name]', photo: 'customer-success' },
+    { name: 'Bhawna Singh', photo: 'operations-manager' },
+    { name: 'Varun Rana', photo: 'site-engineer' },
+    { name: 'Nitin Tyagi', photo: 'customer-success' },
   ],
   reviews: [
     { name: '[Customer name]', before: '[₹X,XXX]', after: '[₹XXX]' },
