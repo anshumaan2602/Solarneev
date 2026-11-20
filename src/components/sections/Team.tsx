@@ -64,6 +64,7 @@ export function Team() {
                   <p className={s.memberName}>{name}</p>
                   <p className={s.memberRole}>{m.role}</p>
                   <p className={s.memberLine}>{m.line}</p>
+                  {"note" in m && m.note && <p className={s.memberNote}>{m.note}</p>}
                 </div>
               </article>
             );
