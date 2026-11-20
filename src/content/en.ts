@@ -428,7 +428,7 @@ export const en = {
   reviews: {
     h2: 'Bills that went down, in our customers’ words.',
     p: 'Quotes from people we installed for, with their monthly bill before and after.',
-    rating: '[4.9] on Google · [XX] reviews',
+    rating: '[4.9] on Google · [11k] reviews',
     photo: 'Photo of their rooftop',
     before: 'Bill before',
     after: 'Bill after',
