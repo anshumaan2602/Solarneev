@@ -1,0 +1,309 @@
+.card {
+  flex: 1 1 400px;
+  min-width: 0;
+  max-width: 520px;
+  background: var(--color-page);
+  color: var(--color-ink);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 34px 70px -28px rgba(0, 0, 0, 0.6);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: var(--h2-ls);
+}
+
+.asOf {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+/* Home / Society / Business / Farm */
+.segments {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 16px;
+  padding: 4px;
+  background: var(--color-sand-deep);
+  border-radius: 14px;
+}
+
+.segment {
+  min-height: 44px;
+  border: 0;
+  border-radius: 10px;
+  padding: 0 6px;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--color-text);
+}
+.segment[aria-pressed="true"] {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.body {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* On-grid / Hybrid */
+.types {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.type {
+  min-height: 54px;
+  display: grid;
+  gap: 2px;
+  align-content: center;
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1.5px solid var(--color-field);
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  text-align: left;
+  cursor: pointer;
+}
+.type[aria-pressed="true"] {
+  border-color: var(--color-orange);
+  background: #fff1dd;
+}
+
+.segment:hover,
+.type:hover {
+  filter: brightness(0.96);
+}
+
+.typeName {
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.typeHint {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--color-muted);
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.reading {
+  font-weight: 800;
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rateRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.number {
+  min-height: 44px;
+  padding: 0 10px;
+  border: 1px solid var(--color-field);
+  border-radius: 10px;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-latin);
+  font-weight: 700;
+  font-size: 15px;
+}
+.rate {
+  width: 76px;
+}
+.houses {
+  width: 100px;
+}
+/* Not in the design: an entry out of range, which the estimate is ignoring. */
+.invalid {
+  border-color: var(--color-red);
+}
+
+.housesRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.recRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-height: 32px;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.useRec {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--color-brown);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-brown);
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+}
+.useRec:hover {
+  text-decoration: underline;
+}
+
+/* The estimate */
+.results {
+  border-top: 1px solid var(--color-line-strong);
+  padding-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(124px, 100%), 1fr));
+  gap: 8px;
+}
+
+.tile {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.tileLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-muted);
+}
+
+.tileValue {
+  margin: 4px 0 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 23px;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.breakdown {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.lineLabel {
+  color: var(--color-text);
+}
+
+.lineValue {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.total {
+  border-top: 1px dashed var(--color-field);
+  padding-top: 10px;
+}
+
+.totalLabel {
+  font-weight: 800;
+}
+
+.totalValue {
+  margin: 0;
+  font-weight: 800;
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+
+.extras {
+  list-style: none;
+  margin: 0;
+  padding: 12px 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  gap: 10px 16px;
+  background: var(--color-sand);
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+.extra {
+  display: grid;
+  gap: 2px;
+}
+
+.extraLabel {
+  color: var(--color-muted);
+}
+
+.extraValue {
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.notes {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.note {
+  margin: 0;
+}
+
+.yieldNote {
+  margin: 0;
+  color: var(--color-muted);
+}

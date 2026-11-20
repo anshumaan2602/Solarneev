@@ -1,0 +1,101 @@
+.section {
+  background: var(--color-sand);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 64px;
+  align-items: center;
+}
+
+.text {
+  flex: 1 1 440px;
+  min-width: 0;
+}
+
+.title {
+  max-width: 16ch;
+  text-wrap: balance;
+}
+
+.p1,
+.p2 {
+  max-width: 58ch;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+.p1 {
+  margin: 20px 0 0;
+}
+.p2 {
+  margin: 16px 0 0;
+}
+
+.figure {
+  flex: 1 1 440px;
+  min-width: 0;
+  margin: 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 24px;
+  padding: clamp(20px, 3vw, 32px);
+}
+
+.caption {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.chart {
+  margin-top: 24px;
+}
+
+.bars {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: end;
+  height: 236px;
+  border-bottom: 1px solid var(--color-field);
+}
+
+.barCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  height: 100%;
+}
+
+.amount {
+  font-weight: 800;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.bar {
+  width: 100%;
+  max-width: 76px;
+  background: var(--color-orange);
+  border-radius: 4px 4px 0 0;
+}
+
+/* Hill and North-East states get 10% more. */
+.hill {
+  background: var(--color-blue);
+}
+
+.axis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-text);
+  text-align: center;
+}

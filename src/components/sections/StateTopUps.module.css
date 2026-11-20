@@ -1,0 +1,71 @@
+.section {
+  background: var(--color-sand);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 48px;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.title {
+  max-width: 16ch;
+}
+
+.lead {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+/* Scrolls sideways on narrow screens rather than squeezing the columns. */
+.scroller {
+  margin-top: 32px;
+  overflow-x: auto;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 20px;
+  background: var(--color-white);
+}
+
+.table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.headRow {
+  background: var(--color-sand);
+  text-align: left;
+}
+
+.th {
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.row {
+  border-top: 1px solid var(--color-line-soft);
+}
+
+.state {
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 800;
+}
+
+.cell {
+  padding: 14px 20px;
+}
+
+.conditions {
+  padding: 14px 20px;
+  color: var(--color-text);
+}

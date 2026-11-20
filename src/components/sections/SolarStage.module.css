@@ -1,0 +1,140 @@
+.col {
+  flex: 999 1 560px;
+  min-width: 0;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--color-navy-800);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+/* Keep the house in view while scrolling through the calculator, but only when the two sit
+   side by side: 560px stage + 24px gap + 400px calculator. Measured on the row itself
+   (the "calculator" container in Header.module.css), so it holds at any viewport width. */
+@container calculator (min-width: 984px) {
+  .col {
+    position: sticky;
+    top: 16px;
+  }
+}
+
+/* Sky, sun glow and ground shadow behind the transparent 3D canvas. */
+.stage {
+  position: relative;
+  flex: none;
+  height: clamp(300px, 40vw, 560px);
+  background:
+    radial-gradient(circle at 15% 14%, #fff3d6 0, #ffe3a8 3.2%, rgba(255, 196, 102, 0.55) 6.6%, rgba(255, 170, 80, 0.18) 16%, rgba(255, 170, 80, 0) 34%),
+    radial-gradient(120% 70% at 50% 110%, rgba(1, 18, 27, 0.7) 0, rgba(1, 18, 27, 0) 60%),
+    linear-gradient(180deg, #2b6c8c 0%, #1e5876 46%, #13425c 100%);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.chips {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+  pointer-events: none;
+}
+
+.chip {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(2, 27, 40, 0.8);
+  color: var(--color-on-dark);
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.hint {
+  margin: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(2, 27, 40, 0.6);
+  color: var(--color-on-dark-body);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.turns {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.turn {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(2, 27, 40, 0.8);
+  color: var(--color-on-dark);
+  cursor: pointer;
+  padding: 0;
+}
+.turn:hover {
+  background: rgba(10, 70, 98, 0.95);
+}
+
+.noWebGL {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 46%;
+  margin: 0;
+  text-align: center;
+  color: var(--color-on-dark-body);
+  font-size: 15px;
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(130px, 100%), 1fr));
+  gap: 12px 20px;
+  padding: 16px 20px 18px;
+  background: var(--color-navy-800);
+  color: var(--color-on-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fact {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.factLabel {
+  font-size: 12px;
+  color: var(--color-on-dark-label);
+  font-weight: 600;
+}
+
+.factValue {
+  margin: 0;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}

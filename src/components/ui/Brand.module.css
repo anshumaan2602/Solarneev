@@ -1,0 +1,72 @@
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.logo {
+  display: block;
+  flex: none;
+  object-fit: contain;
+  background: var(--color-white);
+  box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.55);
+}
+
+.text {
+  display: grid;
+  gap: 5px;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-brand);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.sun {
+  flex: none;
+  margin: 0 0.02em;
+  overflow: visible;
+}
+
+.neev {
+  color: var(--color-orange);
+}
+
+.tagline {
+  font-family: var(--font-brand);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  color: var(--color-on-dark-label);
+}
+
+/* Sizes */
+.nav .logo {
+  width: 52px;
+  height: 46px;
+  border-radius: 12px;
+}
+.nav .wordmark {
+  font-size: 24px;
+}
+.nav .tagline {
+  font-size: 9.5px;
+}
+
+.footer .logo {
+  width: 60px;
+  height: 53px;
+  border-radius: 14px;
+}
+.footer .wordmark {
+  font-size: 27px;
+}
+.footer .tagline {
+  font-size: 10.5px;
+}

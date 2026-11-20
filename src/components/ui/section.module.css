@@ -1,0 +1,17 @@
+/* Shared by most content sections. */
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 104px) clamp(16px, 4vw, 40px);
+}
+
+/* Section heading. Line height and letter spacing come from the page language (SitePage.module.css). */
+.h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 3.8vw, 50px);
+  line-height: var(--h2-lh);
+  letter-spacing: var(--h2-ls);
+}

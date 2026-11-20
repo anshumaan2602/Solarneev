@@ -1,0 +1,172 @@
+.section {
+  background: var(--color-navy-900);
+  color: var(--color-on-dark);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 104px) clamp(16px, 4vw, 40px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 64px;
+  align-items: flex-start;
+}
+
+.info {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.title {
+  max-width: 14ch;
+}
+
+.lead {
+  margin: 16px 0 0;
+  max-width: 46ch;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-on-dark-body);
+}
+
+.details {
+  margin: 28px 0 0;
+  display: grid;
+  gap: 14px;
+  font-size: 16px;
+}
+
+.phoneGroup {
+  display: grid;
+  gap: 4px;
+}
+
+.group {
+  display: grid;
+  gap: 2px;
+}
+
+.term {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-on-dark-label);
+}
+
+.phones {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 20px;
+  font-family: var(--font-display-latin);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.phone {
+  color: var(--color-white);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.phone:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.value {
+  margin: 0;
+  font-weight: 700;
+}
+
+.email {
+  color: var(--color-amber);
+  overflow-wrap: anywhere;
+}
+
+.link {
+  color: var(--color-amber);
+}
+
+.address {
+  margin: 0;
+  max-width: 40ch;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.directions {
+  margin: 4px 0 0;
+}
+
+.directionsLink {
+  color: var(--color-amber);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Call-back form */
+.form {
+  flex: 1 1 420px;
+  min-width: 0;
+  max-width: 560px;
+  display: grid;
+  gap: 16px;
+  background: var(--color-page);
+  color: var(--color-ink);
+  border-radius: 24px;
+  padding: clamp(22px, 3vw, 32px);
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+  gap: 16px;
+}
+
+.input {
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--color-field);
+  border-radius: 10px;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-size: 16px;
+}
+
+.select {
+  min-height: 48px;
+  padding: 0 12px;
+  border: 1px solid var(--color-field);
+  border-radius: 10px;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-size: 16px;
+}
+
+.submit {
+  min-height: 52px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--color-orange);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+}
+.submit:hover {
+  background: var(--color-orange-deep);
+}
+.submit:disabled {
+  cursor: progress;
+  opacity: 0.8;
+}
+
+/* Spam trap: hidden from people, filled in by bots. */
+.trap {
+  display: none;
+}

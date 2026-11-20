@@ -1,0 +1,235 @@
+.section {
+  background: var(--color-sand);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 48px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.intro {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.title {
+  max-width: 18ch;
+  text-wrap: balance;
+}
+
+.lead {
+  margin: 16px 0 0;
+  max-width: 60ch;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+
+/* On-grid / Hybrid */
+.switch {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 14px;
+  background: var(--color-sand-track);
+}
+
+.switchBtn {
+  min-height: 46px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+}
+.switchBtn[aria-pressed="true"] {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+.switchBtn:hover {
+  filter: brightness(0.96);
+}
+
+/* Price table: a grid of rows that turns into two-column cards on phones. */
+.table {
+  margin-top: 28px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line-strong);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.head,
+.row {
+  display: grid;
+  grid-template-columns: minmax(64px, 0.7fr) minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 0.9fr) minmax(118px, auto);
+  gap: 10px 18px;
+  align-items: center;
+}
+
+.head {
+  padding: 14px 22px;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.row {
+  padding: 14px 22px;
+  border-top: 1px solid var(--color-line-soft);
+}
+
+.kw {
+  font-family: var(--font-display-latin);
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+.cell {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* Column names repeated inside each cell, for the phone layout. */
+.cellLabel {
+  display: none;
+}
+
+.cost {
+  font-weight: 700;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.sub {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--color-green);
+  font-variant-numeric: tabular-nums;
+}
+
+.split {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-muted);
+}
+
+.net {
+  font-family: var(--font-display-latin);
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1.2;
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.units {
+  font-weight: 700;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.act {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.go {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--color-brown);
+  border-radius: 999px;
+  color: var(--color-brown);
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.go:hover {
+  text-decoration: underline;
+}
+
+.note {
+  margin: 14px 0 0;
+  max-width: 92ch;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+/* What SOLARNEEV handles */
+.incTitle {
+  margin: 44px 0 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: var(--h2-ls);
+}
+
+.incList {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 12px;
+}
+
+.incItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 12px 16px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.incIcon {
+  flex: none;
+}
+
+@media (max-width: 760px) {
+  .head {
+    display: none;
+  }
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 16px;
+  }
+  .cellLabel {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-muted);
+  }
+  .kw,
+  .act {
+    grid-column: 1 / -1;
+  }
+  .act .go {
+    width: 100%;
+  }
+}

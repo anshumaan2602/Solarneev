@@ -1,0 +1,25 @@
+/* Not in the design: form outcomes, in the design's green and red tints. */
+
+.status {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.ok {
+  background: var(--color-green-tint);
+  color: var(--color-green);
+}
+
+.failed {
+  background: var(--color-red-tint);
+  color: var(--color-red);
+}
+
+.phone {
+  color: inherit;
+  white-space: nowrap;
+}

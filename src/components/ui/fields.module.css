@@ -1,0 +1,33 @@
+/* Form fields shared by the calculator and the two forms. */
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Calculator and farm-form menus. */
+.select {
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid var(--color-field);
+  border-radius: 10px;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Not in the design: shown under a field that needs fixing. */
+.error {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-red);
+}

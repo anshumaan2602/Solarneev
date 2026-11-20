@@ -1,0 +1,129 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 16px;
+  flex-wrap: wrap;
+  min-height: 60px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.link {
+  color: var(--color-on-dark-strong);
+  text-decoration: none;
+}
+
+.link:hover,
+.phone:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px 14px;
+  flex-wrap: wrap;
+}
+
+.langSwitch {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 999px;
+  border: 1px solid rgba(246, 241, 231, 0.28);
+  background: rgba(246, 241, 231, 0.06);
+}
+
+.langBtn {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-on-dark-strong);
+  cursor: pointer;
+}
+.langBtn[aria-pressed="true"] {
+  background: var(--color-orange);
+  color: var(--color-ink);
+}
+.langBtn:hover {
+  filter: brightness(1.12);
+}
+
+.langEn {
+  font-family: var(--font-latin);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.langHi {
+  font-family: var(--font-devanagari);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-on-dark);
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 12px;
+  background: var(--color-orange);
+  color: var(--color-ink);
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+}
+.book:hover {
+  background: var(--color-orange-deep);
+}
+
+/* No room for the section links on narrow screens. */
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+}
+
+/* Phones: the call link becomes a round icon button; the number stays readable to screen readers. */
+@media (max-width: 480px) {
+  .phone {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    border: 1px solid rgba(246, 241, 231, 0.28);
+    border-radius: 999px;
+  }
+  .phoneText {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}

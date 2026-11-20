@@ -1,0 +1,44 @@
+.header {
+  position: relative;
+  background: var(--color-navy-900);
+  color: var(--color-on-dark);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 520px at 8% -8%, rgba(252, 140, 10, 0.18), rgba(252, 140, 10, 0) 62%),
+    radial-gradient(760px 480px at 104% 22%, rgba(0, 129, 170, 0.26), rgba(0, 129, 170, 0) 62%);
+}
+
+.inner {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 18px clamp(16px, 4vw, 40px) 64px;
+}
+
+/* The 3D stage and the calculator. A size container, so the stage only sticks
+   while the two sit side by side (see SolarStage.module.css). */
+.calcRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 24px;
+  margin-top: 44px;
+  scroll-margin-top: 24px;
+  container: calculator / inline-size;
+}
+
+.proof {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  margin: 28px 0 0;
+  padding: 0;
+  font-size: 14px;
+  color: var(--color-on-dark-body);
+}
